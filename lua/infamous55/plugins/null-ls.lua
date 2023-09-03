@@ -13,6 +13,7 @@ function spec:config()
         sources = {
             null.builtins.formatting.stylua,
             null.builtins.formatting.gofumpt,
+            null.builtins.formatting.goimports,
             null.builtins.formatting.goimports_reviser,
             null.builtins.formatting.golines,
             null.builtins.formatting.prettier,
