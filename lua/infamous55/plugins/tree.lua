@@ -107,12 +107,12 @@ function spec:config()
             end
 
             -- Open new file upon creation
-            require("nvim-tree.api").events.subscribe(
-                api.events.Event.FileCreated,
-                function(file)
-                    vim.cmd("edit " .. file.fname)
-                end
-            )
+            -- require("nvim-tree.api").events.subscribe(
+            --     api.events.Event.FileCreated,
+            --     function(file)
+            --         vim.cmd("edit " .. file.fname)
+            --     end
+            -- )
         end,
     })
 

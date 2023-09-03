@@ -25,10 +25,9 @@ function spec:config()
         },
         sources = {
             { name = "nvim_lsp" },
+            { name = "luasnip" },
             { name = "buffer" },
-            {
-                name = "path",
-            },
+            { name = "path" },
         },
         ---@diagnostic disable-next-line: missing-fields
         formatting = { format = lspkind.cmp_format({ mode = "symbol" }) },
@@ -42,26 +41,26 @@ function spec:config()
             ["<C-e>"] = cmp.mapping.abort(),
             ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
-            ["<Tab>"] = cmp.mapping(function(fallback)
-                local col = vim.fn.col(".") - 1
-                if cmp.visible() then
-                    cmp.select_next_item()
-                elseif
-                    col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
-                then
-                    fallback()
-                else
-                    cmp.complete()
-                end
-            end, { "i", "s" }),
-
-            ["<S-Tab>"] = cmp.mapping(function(fallback)
-                if cmp.visible() then
-                    cmp.select_prev_item()
-                else
-                    fallback()
-                end
-            end, { "i", "s" }),
+            -- ["<Tab>"] = cmp.mapping(function(fallback)
+            --     local col = vim.fn.col(".") - 1
+            --     if cmp.visible() then
+            --         cmp.select_next_item()
+            --     elseif
+            --         col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
+            --     then
+            --         fallback()
+            --     else
+            --         cmp.complete()
+            --     end
+            -- end, { "i", "s" }),
+            --
+            -- ["<S-Tab>"] = cmp.mapping(function(fallback)
+            --     if cmp.visible() then
+            --         cmp.select_prev_item()
+            --     else
+            --         fallback()
+            --     end
+            -- end, { "i", "s" }),
         },
         window = {
             completion = cmp.config.window.bordered(),

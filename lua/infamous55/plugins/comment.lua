@@ -1,7 +1,8 @@
 local spec = {
     "numToStr/Comment.nvim",
     name = "comment",
-    lazy = false,
+    lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
 }
 
 function spec:config()
