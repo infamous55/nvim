@@ -16,6 +16,7 @@ function spec:config()
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
 
+    ---@diagnostic disable-next-line: missing-fields
     cmp.setup({
         snippet = {
             expand = function(opts)
@@ -29,6 +30,7 @@ function spec:config()
                 name = "path",
             },
         },
+        ---@diagnostic disable-next-line: missing-fields
         formatting = { format = lspkind.cmp_format({ mode = "symbol" }) },
         mapping = {
             ["<C-p>"] = cmp.mapping.select_prev_item(),
