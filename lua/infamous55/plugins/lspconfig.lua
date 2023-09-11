@@ -42,7 +42,6 @@ function spec:config()
     vim.api.nvim_create_autocmd({ "LspAttach" }, {
         group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
         callback = function(args)
-            vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
             local opts = { buffer = args.buf }
 
             vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
