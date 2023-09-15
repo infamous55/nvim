@@ -105,14 +105,6 @@ function spec:config()
                     vim.cmd("wincmd p")
                 end, 0)
             end
-
-            -- Open new file upon creation
-            -- require("nvim-tree.api").events.subscribe(
-            --     api.events.Event.FileCreated,
-            --     function(file)
-            --         vim.cmd("edit " .. file.fname)
-            --     end
-            -- )
         end,
     })
 
