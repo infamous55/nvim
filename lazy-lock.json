@@ -1,15 +1,15 @@
 {
   "LuaSnip": {
     "branch": "master",
-    "commit": "ea7d7ea510c641c4f15042becd27f35b3e5b3c2b"
+    "commit": "c5fb16a934892086d4ba01bac48b77c65435025e"
   },
   "autopairs": {
     "branch": "master",
-    "commit": "defad64afbf19381fe31488a7582bbac421d6e38"
+    "commit": "7b3eb9b5813a22188c4dbb248475fcbaf9f4d195"
   },
   "bufferline": {
     "branch": "main",
-    "commit": "9961d87bb3ec008213c46ba14b3f384a5f520eb5"
+    "commit": "6ecd37e0fa8b156099daedd2191130e083fb1490"
   },
   "cmp": {
     "branch": "main",
@@ -37,7 +37,7 @@
   },
   "gitsigns": {
     "branch": "main",
-    "commit": "907ae8636016aab2f283576fc60d46ca3427e579"
+    "commit": "bce4576a9047085a528c479a7fe1e2f6b787b6c1"
   },
   "lazy.nvim": {
     "branch": "main",
@@ -45,7 +45,7 @@
   },
   "lspconfig": {
     "branch": "master",
-    "commit": "cc388d3f6b9c7c943ae2b2dcd46ad470fd257f91"
+    "commit": "4266f9bb36b4fb09edd19b67d95043cf7ff88ddf"
   },
   "lspkind.nvim": {
     "branch": "master",
@@ -57,7 +57,7 @@
   },
   "mason-lspconfig": {
     "branch": "main",
-    "commit": "f014db32437aa61c86fc0ef1067cd2bc6a37205c"
+    "commit": "2451adb9bdb0fd32140bf3aa8dbc17ff60050db3"
   },
   "mason-null-ls": {
     "branch": "main",
@@ -69,7 +69,7 @@
   },
   "neodev.nvim": {
     "branch": "main",
-    "commit": "471324e6c746284dbbdc1d357799d1911bb7e120"
+    "commit": "e9dd1535759794635a951644c183beb327879407"
   },
   "null-ls": {
     "branch": "main",
@@ -81,11 +81,11 @@
   },
   "nvim-lspconfig": {
     "branch": "master",
-    "commit": "cc388d3f6b9c7c943ae2b2dcd46ad470fd257f91"
+    "commit": "4266f9bb36b4fb09edd19b67d95043cf7ff88ddf"
   },
   "nvim-tree": {
     "branch": "master",
-    "commit": "94c7c810af205c0f00c8f105dcf490c8eb17658a"
+    "commit": "a3aa3b47eac8b6289f028743bef4ce9eb0f6782e"
   },
   "nvim-web-devicons": {
     "branch": "master",
@@ -101,10 +101,10 @@
   },
   "telescope": {
     "branch": "master",
-    "commit": "59812c26d826e8c717e29406267ea1260f71e103"
+    "commit": "40c8d2fc2b729dd442eda093cf8c9496d6e23732"
   },
   "treesitter": {
     "branch": "master",
-    "commit": "48b237fd3f482aef2f5896b8b7a6ece71c19ad99"
+    "commit": "b7f2dd5dfbd24a1239844e15637b637b990df164"
   }
 }
