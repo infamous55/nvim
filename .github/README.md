@@ -1,21 +1,8 @@
-<h1 align="center">
-  <br />
-  <a href="#" target="_blank">
-    <img src="https://neovim.io/logos/neovim-mark.png" width="80" height="80" alt="Logo" />
-  </a>
-  <br />
-    Configuration
-</h1>
-<p align="center">
-  <img src="https://img.shields.io/badge/Neovim-0.10.0-blueviolet.svg?logo=Neovim&color=90E59A&logoColor=white" />
-  <img src="https://img.shields.io/badge/License-MIT-white.svg" />
-</p>
+# Neovim Configuration
 
 ## Overview
 
 This is my personal Neovim configuration, designed to be minimalistic and efficient. It is written in Lua and consists of less than 500 lines of code. I've tailored it to suit my workflow, but you're welcome to use it as a starting point for your own setup.
-
-![Screenshot](screenshot.png)
 
 ## Plugins
 
