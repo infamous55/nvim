@@ -5,9 +5,7 @@
   </a>
   <br />
     Configuration
-  <br />
 </h1>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.10.0-blueviolet.svg?logo=Neovim&color=90E59A&logoColor=white" />
   <img src="https://img.shields.io/badge/License-MIT-white.svg" />
