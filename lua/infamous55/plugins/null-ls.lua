@@ -17,6 +17,7 @@ function spec:config()
             null.builtins.formatting.goimports_reviser,
             null.builtins.formatting.golines,
             null.builtins.formatting.prettier,
+            null.builtins.formatting.shfmt,
         },
         on_attach = function(client, bufnr)
             if client.supports_method("textDocument/formatting") then

@@ -65,6 +65,7 @@ function spec:config()
     lspconfig.lua_ls.setup({})
     lspconfig.gopls.setup({})
     lspconfig.graphql.setup({})
+    lspconfig.bashls.setup({})
 end
 
 return spec
