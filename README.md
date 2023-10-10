@@ -16,6 +16,7 @@ I'm using the [lazy](https://github.com/folke/lazy.nvim) plugin manager. Here ar
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
