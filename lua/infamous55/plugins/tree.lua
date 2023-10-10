@@ -36,7 +36,6 @@ function spec:config()
             adaptive_size = false,
             side = "right",
             width = 30,
-            hide_root_folder = false,
         },
         git = {
             enable = true,
