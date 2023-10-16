@@ -8,7 +8,7 @@ local spec = {
 function spec:config()
     require("lualine").setup({
         options = {
-            theme = "github_dark_high_contrast",
+            theme = "github_dark_colorblind",
         },
     })
 end
