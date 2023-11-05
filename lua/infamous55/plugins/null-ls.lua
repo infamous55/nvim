@@ -18,6 +18,8 @@ function spec:config()
             null.builtins.formatting.golines,
             null.builtins.formatting.prettier,
             null.builtins.formatting.shfmt,
+            null.builtins.formatting.black,
+            null.builtins.formatting.isort,
         },
         on_attach = function(client, bufnr)
             if client.supports_method("textDocument/formatting") then
