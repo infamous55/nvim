@@ -20,6 +20,7 @@ function spec:config()
             null.builtins.formatting.shfmt,
             null.builtins.formatting.black,
             null.builtins.formatting.isort,
+            null.builtins.formatting.clang_format,
         },
         on_attach = function(client, bufnr)
             if client.supports_method("textDocument/formatting") then

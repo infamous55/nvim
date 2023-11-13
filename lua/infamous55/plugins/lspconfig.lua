@@ -67,6 +67,7 @@ function spec:config()
     lspconfig.graphql.setup({})
     lspconfig.bashls.setup({})
     lspconfig.pyright.setup({})
+    lspconfig.clangd.setup({})
 end
 
 return spec
