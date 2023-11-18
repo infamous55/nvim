@@ -10,7 +10,7 @@ function spec:config()
     vim.g.vimtex_quickfix_mode = 0
 
     vim.g.vimtex_compiler_latexmk = {
-        build_dir = ".out",
+        out_dir = ".out",
         options = {
             "-shell-escape",
             "-verbose",
