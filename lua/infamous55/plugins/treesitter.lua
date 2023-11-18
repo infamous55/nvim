@@ -12,7 +12,7 @@ function spec:config()
     treesitter.setup({
         ensure_installed = "all",
         sync_install = false,
-        highlight = { enable = true },
+        highlight = { enable = true, disable = { "latex" } },
         indent = { enable = true },
     })
 end

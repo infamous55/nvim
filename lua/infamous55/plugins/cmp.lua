@@ -4,6 +4,8 @@ local spec = {
     event = { "InsertEnter" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-omni",
+        -- "kdheepak/cmp-latex-symbols",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "L3MON4D3/LuaSnip",
@@ -26,11 +28,24 @@ function spec:config()
         sources = {
             { name = "nvim_lsp" },
             { name = "luasnip" },
+            { name = "omni" },
             { name = "buffer" },
             { name = "path" },
+            -- {
+            --     name = "latex_symbols",
+            --     filetype = { "tex", "latex" },
+            --     option = { cache = true },
+            -- },
         },
         ---@diagnostic disable-next-line: missing-fields
-        formatting = { format = lspkind.cmp_format({ mode = "symbol" }) },
+        formatting = {
+            format = lspkind.cmp_format({
+                mode = "symbol",
+                menu = {
+                    omni = "",
+                },
+            }),
+        },
         mapping = {
             ["<C-p>"] = cmp.mapping.select_prev_item(),
             ["<C-n>"] = cmp.mapping.select_next_item(),
