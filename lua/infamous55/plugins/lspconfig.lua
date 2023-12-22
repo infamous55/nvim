@@ -68,6 +68,9 @@ function spec:config()
     lspconfig.bashls.setup({})
     lspconfig.pyright.setup({})
     lspconfig.clangd.setup({})
+    lspconfig.elixirls.setup({
+        cmd = { "/home/infamous55/.local/share/nvim/mason/bin/elixir-ls" },
+    })
 end
 
 return spec
