@@ -39,6 +39,10 @@
     "branch": "master",
     "commit": "0236521ea582747b58869cb72f70ccfa967d2e89"
   },
+  "elixir-tools.nvim": {
+    "branch": "main",
+    "commit": "6f1138f754ffded9979ffb4520fede8dea233ccc"
+  },
   "github-theme": {
     "branch": "main",
     "commit": "4727aa7c1bb53a4fafcb37346a4ebb4511cec3c9"

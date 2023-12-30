@@ -62,15 +62,19 @@ function spec:config()
         end,
     })
 
+    --Enable (broadcasting) snippet capability for completion
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    ---@diagnostic disable-next-line: inject-field
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+
     lspconfig.lua_ls.setup({})
     lspconfig.gopls.setup({})
     lspconfig.graphql.setup({})
     lspconfig.bashls.setup({})
     lspconfig.pyright.setup({})
     lspconfig.clangd.setup({})
-    lspconfig.elixirls.setup({
-        cmd = { "/home/infamous55/.local/share/nvim/mason/bin/elixir-ls" },
-    })
+    lspconfig.html.setup({ capabilities = capabilities })
+    lspconfig.emmet_language_server.setup({})
 end
 
 return spec
