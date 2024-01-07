@@ -4,19 +4,29 @@ local spec = {
     event = { "InsertEnter" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
+        "L3MON4D3/LuaSnip",
+        "rafamadriz/friendly-snippets",
+        "saadparwaiz1/cmp_luasnip",
         "hrsh7th/cmp-omni",
-        -- "kdheepak/cmp-latex-symbols",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
-        "L3MON4D3/LuaSnip",
         "onsails/lspkind.nvim",
+        -- "kdheepak/cmp-latex-symbols",
     },
 }
 
 function spec:config()
     local cmp = require("cmp")
     local luasnip = require("luasnip")
+    require("luasnip.loaders.from_vscode").lazy_load()
     local lspkind = require("lspkind")
+
+    vim.keymap.set({ "i", "s" }, "<C-J>", function()
+        luasnip.jump(-1)
+    end, { silent = true })
+    vim.keymap.set({ "i", "s" }, "<C-L>", function()
+        luasnip.jump(1)
+    end, { silent = true })
 
     ---@diagnostic disable-next-line: missing-fields
     cmp.setup({

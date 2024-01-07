@@ -1,5 +1,5 @@
 local spec = {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     name = "null-ls",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "nvim-lua/plenary.nvim" },
@@ -12,15 +12,15 @@ function spec:config()
         bordered = "rounded",
         sources = {
             null.builtins.formatting.stylua,
+            null.builtins.formatting.prettier,
+            null.builtins.formatting.shfmt,
+            null.builtins.formatting.clang_format,
+            null.builtins.formatting.black,
+            null.builtins.formatting.isort,
             null.builtins.formatting.gofumpt,
             null.builtins.formatting.goimports,
             null.builtins.formatting.goimports_reviser,
             null.builtins.formatting.golines,
-            null.builtins.formatting.prettier,
-            null.builtins.formatting.shfmt,
-            null.builtins.formatting.black,
-            null.builtins.formatting.isort,
-            null.builtins.formatting.clang_format,
         },
         on_attach = function(client, bufnr)
             if client.supports_method("textDocument/formatting") then

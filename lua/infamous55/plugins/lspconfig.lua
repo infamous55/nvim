@@ -18,8 +18,16 @@ end
 
 function spec:config()
     require("neodev").setup()
-
     local lspconfig = require("lspconfig")
+    lspconfig.lua_ls.setup({
+        settings = {
+            Lua = {
+                completion = {
+                    callSnippet = "Replace",
+                },
+            },
+        },
+    })
 
     lspconfig.util.on_setup = lspconfig.util.add_hook_after(
         lspconfig.util.on_setup,
@@ -62,19 +70,23 @@ function spec:config()
         end,
     })
 
-    --Enable (broadcasting) snippet capability for completion
+    -- Enable (broadcasting) snippet capability for completion
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     ---@diagnostic disable-next-line: inject-field
     capabilities.textDocument.completion.completionItem.snippetSupport = true
+    lspconfig.html.setup({ capabilities = capabilities })
 
-    lspconfig.lua_ls.setup({})
+    lspconfig.emmet_language_server.setup({})
+    lspconfig.bashls.setup({})
+    lspconfig.clangd.setup({})
+    lspconfig.pyright.setup({})
     lspconfig.gopls.setup({})
     lspconfig.graphql.setup({})
-    lspconfig.bashls.setup({})
-    lspconfig.pyright.setup({})
-    lspconfig.clangd.setup({})
-    lspconfig.html.setup({ capabilities = capabilities })
-    lspconfig.emmet_language_server.setup({})
+    lspconfig.elixirls.setup({
+        cmd = {
+            "/home/infamous55/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
+        },
+    })
 end
 
 return spec
