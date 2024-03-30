@@ -81,7 +81,9 @@ function spec:config()
     lspconfig.clangd.setup({})
     lspconfig.pyright.setup({})
     lspconfig.gopls.setup({})
+    lspconfig.rust_analyzer.setup({})
     lspconfig.graphql.setup({})
+    lspconfig.marksman.setup({})
     lspconfig.elixirls.setup({
         cmd = {
             "/home/infamous55/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
