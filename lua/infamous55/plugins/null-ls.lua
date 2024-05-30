@@ -11,6 +11,7 @@ function spec:config()
     null.setup({
         bordered = "rounded",
         sources = {
+            null.builtins.formatting.typstfmt,
             null.builtins.formatting.stylua,
             null.builtins.formatting.prettier,
             null.builtins.formatting.shfmt,

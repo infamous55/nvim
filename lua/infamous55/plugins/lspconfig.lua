@@ -77,6 +77,8 @@ function spec:config()
     lspconfig.html.setup({ capabilities = capabilities })
 
     lspconfig.emmet_language_server.setup({})
+    lspconfig.taplo.setup({})
+    lspconfig.typst_lsp.setup({})
     lspconfig.bashls.setup({})
     lspconfig.clangd.setup({})
     lspconfig.pyright.setup({})
