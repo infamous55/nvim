@@ -76,19 +76,40 @@ function spec:config()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
     lspconfig.html.setup({ capabilities = capabilities })
 
-    lspconfig.emmet_language_server.setup({})
-    lspconfig.taplo.setup({})
+    lspconfig.marksman.setup({})
     lspconfig.typst_lsp.setup({})
+    lspconfig.taplo.setup({})
     lspconfig.bashls.setup({})
+    lspconfig.graphql.setup({})
     lspconfig.clangd.setup({})
     lspconfig.pyright.setup({})
     lspconfig.gopls.setup({})
     lspconfig.rust_analyzer.setup({})
-    lspconfig.graphql.setup({})
-    lspconfig.marksman.setup({})
     lspconfig.elixirls.setup({
         cmd = {
             "/home/infamous55/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
+        },
+    })
+    lspconfig.emmet_language_server.setup({
+        filetypes = { "html", "css", "elixir", "eelixir", "heex" },
+    })
+    lspconfig.tailwindcss.setup({
+        filetypes = { "html", "elixir", "eelixir", "heex" },
+        init_options = {
+            userLanguages = {
+                elixir = "html-eex",
+                eelixir = "html-eex",
+                heex = "html-eex",
+            },
+        },
+        settings = {
+            tailwindCSS = {
+                experimental = {
+                    classRegex = {
+                        "class[:]\\s*\"([^\"]*)\"",
+                    },
+                },
+            },
         },
     })
 end
