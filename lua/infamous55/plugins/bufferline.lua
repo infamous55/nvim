@@ -7,9 +7,7 @@ local spec = {
 
 function spec:config()
     local bufferline = require("bufferline")
-    ---@diagnostic disable-next-line: missing-fields
     bufferline.setup({
-        ---@diagnostic disable-next-line: missing-fields
         options = {
             offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
         },

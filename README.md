@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is my personal Neovim configuration, designed to be minimalistic and efficient. It is written in Lua and consists of less than 500 lines of code. I've tailored it to suit my workflow, but you're welcome to use it as a starting point for your own setup.
+This is my personal Neovim configuration, designed to be minimalistic and efficient. It is written in Lua and consists of less than 600 lines of code. I've tailored it to suit my workflow, but you're welcome to use it as a starting point for your own setup.
 
 ## Plugins
 

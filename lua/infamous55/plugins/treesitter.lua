@@ -8,7 +8,6 @@ local spec = {
 
 function spec:config()
     local treesitter = require("nvim-treesitter.configs")
-    ---@diagnostic disable-next-line: missing-fields
     treesitter.setup({
         ensure_installed = "all",
         sync_install = false,

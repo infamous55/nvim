@@ -2,7 +2,6 @@ local spec = {
     "neovim/nvim-lspconfig",
     name = "lspconfig",
     event = { "BufReadPre", "BufNewFile" },
-    dependencies = { "folke/neodev.nvim" },
 }
 
 function spec:init()
@@ -17,35 +16,14 @@ function spec:init()
 end
 
 function spec:config()
-    require("neodev").setup()
     local lspconfig = require("lspconfig")
-    lspconfig.lua_ls.setup({
-        settings = {
-            Lua = {
-                completion = {
-                    callSnippet = "Replace",
-                },
-            },
-        },
-    })
 
-    lspconfig.util.on_setup = lspconfig.util.add_hook_after(
-        lspconfig.util.on_setup,
-        function(config)
-            config.capabilities = vim.tbl_deep_extend(
-                "force",
-                config.capabilities,
-                cmp.default_capabilities()
-            )
-
-            config.handlers["textDocument/hover"] =
-                vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-            config.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-                vim.lsp.handlers.signature_help,
-                { border = "rounded" }
-            )
-        end
-    )
+    local windows = require("lspconfig.ui.windows")
+    windows.default_options.border = "rounded"
+    vim.lsp.handlers["textDocument/hover"] =
+        vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+    vim.lsp.handlers["textDocument/signatureHelp"] =
+        vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 
     vim.api.nvim_create_autocmd({ "LspAttach" }, {
         group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
@@ -58,24 +36,22 @@ function spec:config()
             vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
             vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
             vim.keymap.set("n", "<space>r", vim.lsp.buf.rename, opts)
+            vim.keymap.set("n", "<space>f", vim.lsp.buf.format, opts)
             vim.keymap.set(
                 { "n", "v" },
                 "<space>ca",
                 vim.lsp.buf.code_action,
                 opts
             )
-            vim.keymap.set("n", "<space>f", function()
-                vim.lsp.buf.format({ async = true })
-            end, opts)
         end,
     })
 
     -- Enable (broadcasting) snippet capability for completion
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    ---@diagnostic disable-next-line: inject-field
     capabilities.textDocument.completion.completionItem.snippetSupport = true
     lspconfig.html.setup({ capabilities = capabilities })
 
+    lspconfig.lua_ls.setup({})
     lspconfig.marksman.setup({})
     lspconfig.typst_lsp.setup({})
     lspconfig.taplo.setup({})
@@ -85,16 +61,24 @@ function spec:config()
     lspconfig.pyright.setup({})
     lspconfig.gopls.setup({})
     lspconfig.rust_analyzer.setup({})
+    lspconfig.tsserver.setup({})
     lspconfig.elixirls.setup({
         cmd = {
             "/home/infamous55/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
         },
     })
     lspconfig.emmet_language_server.setup({
-        filetypes = { "html", "css", "elixir", "eelixir", "heex" },
+        filetypes = {
+            "html",
+            "css",
+            "elixir",
+            "eelixir",
+            "heex",
+            "typescriptreact",
+        },
     })
     lspconfig.tailwindcss.setup({
-        filetypes = { "html", "elixir", "eelixir", "heex" },
+        filetypes = { "html", "elixir", "eelixir", "heex", "typescriptreact" },
         init_options = {
             userLanguages = {
                 elixir = "html-eex",

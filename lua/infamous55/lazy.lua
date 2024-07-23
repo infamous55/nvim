@@ -9,7 +9,6 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
----@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 local lazy = require("lazy")
@@ -25,8 +24,6 @@ lazy.setup("infamous55.plugins", {
         rtp = {
             disabled_plugins = {
                 "gzip",
-                -- "matchit",
-                -- "matchparen",
                 "netrwPlugin",
                 "tarPlugin",
                 "tohtml",

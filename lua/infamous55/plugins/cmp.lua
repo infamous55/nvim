@@ -11,7 +11,6 @@ local spec = {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "onsails/lspkind.nvim",
-        -- "kdheepak/cmp-latex-symbols",
     },
 }
 
@@ -28,7 +27,6 @@ function spec:config()
         luasnip.jump(1)
     end, { silent = true })
 
-    ---@diagnostic disable-next-line: missing-fields
     cmp.setup({
         snippet = {
             expand = function(opts)
@@ -41,14 +39,10 @@ function spec:config()
             { name = "omni" },
             { name = "buffer" },
             { name = "path" },
-            -- {
-            --     name = "latex_symbols",
-            --     filetype = { "tex", "latex" },
-            --     option = { cache = true },
-            -- },
         },
-        ---@diagnostic disable-next-line: missing-fields
         formatting = {
+            expandable_indicator = true,
+            fields = { "abbr", "kind" },
             format = lspkind.cmp_format({
                 mode = "symbol",
                 menu = {
