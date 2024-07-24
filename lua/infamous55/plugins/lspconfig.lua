@@ -11,8 +11,12 @@ function spec:init()
     })
 
     vim.keymap.set("n", "<space>d", vim.diagnostic.open_float)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+    vim.keymap.set("n", "[d", function()
+        vim.diagnostic.jump({ count = -1, float = true })
+    end)
+    vim.keymap.set("n", "]d", function()
+        vim.diagnostic.jump({ count = 1, float = true })
+    end)
 end
 
 function spec:config()
@@ -46,12 +50,40 @@ function spec:config()
         end,
     })
 
+    lspconfig.lua_ls.setup({
+        on_init = function(client)
+            local path = client.workspace_folders[1].name
+            if
+                vim.loop.fs_stat(path .. "/.luarc.json")
+                or vim.loop.fs_stat(path .. "/.luarc.jsonc")
+            then
+                return
+            end
+
+            client.config.settings.Lua =
+                vim.tbl_deep_extend("force", client.config.settings.Lua, {
+                    runtime = {
+                        version = "LuaJIT",
+                    },
+                    workspace = {
+                        checkThirdParty = false,
+                        library = {
+                            vim.env.VIMRUNTIME,
+                            "${3rd}/luv/library",
+                        },
+                    },
+                })
+        end,
+        settings = {
+            Lua = {},
+        },
+    })
+
     -- Enable (broadcasting) snippet capability for completion
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
     lspconfig.html.setup({ capabilities = capabilities })
 
-    lspconfig.lua_ls.setup({})
     lspconfig.marksman.setup({})
     lspconfig.typst_lsp.setup({})
     lspconfig.taplo.setup({})
