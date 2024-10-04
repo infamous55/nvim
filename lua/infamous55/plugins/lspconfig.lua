@@ -93,7 +93,7 @@ function spec:config()
     lspconfig.pyright.setup({})
     lspconfig.gopls.setup({})
     lspconfig.rust_analyzer.setup({})
-    lspconfig.tsserver.setup({})
+    lspconfig.ts_ls.setup({})
     lspconfig.elixirls.setup({
         cmd = {
             "/home/infamous55/.local/share/nvim/mason/packages/elixir-ls/language_server.sh",
