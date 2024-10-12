@@ -16,8 +16,6 @@ function spec:config()
             null.builtins.formatting.prettier,
             null.builtins.formatting.shfmt,
             null.builtins.formatting.clang_format,
-            null.builtins.formatting.black,
-            null.builtins.formatting.isort,
             null.builtins.formatting.gofumpt,
             null.builtins.formatting.goimports,
             null.builtins.formatting.goimports_reviser,
