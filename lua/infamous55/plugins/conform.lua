@@ -26,7 +26,7 @@ function spec:config()
         default_format_opts = {
             lsp_format = "fallback",
         },
-        format_on_save = { timeout_ms = 500 },
+        format_on_save = { timeout_ms = 1000 },
     })
 end
 

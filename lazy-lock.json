@@ -1,86 +1,23 @@
 {
-  "LuaSnip": {
-    "branch": "master",
-    "commit": "03c8e67eb7293c404845b3982db895d59c0d1538"
-  },
-  "blink.cmp": {
-    "branch": "main",
-    "commit": "b6f11a0aa33e601c469a126e3ed6e35208fe3ea3"
-  },
-  "bufferline": {
-    "branch": "main",
-    "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3"
-  },
-  "colorizer": {
-    "branch": "master",
-    "commit": "2933cb5b547b8a2dba20e8087d488462ad5bc6bc"
-  },
-  "comment": {
-    "branch": "master",
-    "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb"
-  },
-  "conform.nvim": {
-    "branch": "master",
-    "commit": "363243c03102a531a8203311d4f2ae704c620d9b"
-  },
-  "friendly-snippets": {
-    "branch": "main",
-    "commit": "efff286dd74c22f731cdec26a70b46e5b203c619"
-  },
-  "github-theme": {
-    "branch": "main",
-    "commit": "c106c9472154d6b2c74b74565616b877ae8ed31d"
-  },
-  "gitsigns": {
-    "branch": "main",
-    "commit": "c6fedfd0b1715ee624384b134becec0a7b0a3d28"
-  },
-  "lazy.nvim": {
-    "branch": "main",
-    "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a"
-  },
-  "lspconfig": {
-    "branch": "master",
-    "commit": "9962e25a23f0e992116b99a9a6400947d5a7177b"
-  },
-  "lualine": {
-    "branch": "master",
-    "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83"
-  },
-  "markdown-preview.nvim": {
-    "branch": "master",
-    "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee"
-  },
-  "mason": {
-    "branch": "main",
-    "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22"
-  },
-  "nvim-tree": {
-    "branch": "master",
-    "commit": "d05881f65f0a653db8d830ccc4d2e07d6a720628"
-  },
-  "nvim-web-devicons": {
-    "branch": "master",
-    "commit": "1c9136332840edee0c593f2f4f89598c8ed97f5f"
-  },
-  "plenary.nvim": {
-    "branch": "master",
-    "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66"
-  },
-  "surround": {
-    "branch": "main",
-    "commit": "ae298105122c87bbe0a36b1ad20b06d417c0433e"
-  },
-  "telescope": {
-    "branch": "master",
-    "commit": "415af52339215926d705cccc08145f3782c4d132"
-  },
-  "treesitter": {
-    "branch": "master",
-    "commit": "043d5fb1505ca4bc0f48b42666ae7ebc4bb1a671"
-  },
-  "vimtex": {
-    "branch": "master",
-    "commit": "83e331dcad5ce28012e656eea3906b5b897db2ba"
-  }
+  "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
+  "blink.cmp": { "branch": "main", "commit": "b6f11a0aa33e601c469a126e3ed6e35208fe3ea3" },
+  "bufferline": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
+  "colorizer": { "branch": "master", "commit": "2933cb5b547b8a2dba20e8087d488462ad5bc6bc" },
+  "comment": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
+  "conform.nvim": { "branch": "master", "commit": "363243c03102a531a8203311d4f2ae704c620d9b" },
+  "friendly-snippets": { "branch": "main", "commit": "efff286dd74c22f731cdec26a70b46e5b203c619" },
+  "github-theme": { "branch": "main", "commit": "c106c9472154d6b2c74b74565616b877ae8ed31d" },
+  "gitsigns": { "branch": "main", "commit": "c6fedfd0b1715ee624384b134becec0a7b0a3d28" },
+  "lazy.nvim": { "branch": "main", "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a" },
+  "lspconfig": { "branch": "master", "commit": "9962e25a23f0e992116b99a9a6400947d5a7177b" },
+  "lualine": { "branch": "master", "commit": "2a5bae925481f999263d6f5ed8361baef8df4f83" },
+  "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
+  "mason": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
+  "nvim-tree": { "branch": "master", "commit": "d05881f65f0a653db8d830ccc4d2e07d6a720628" },
+  "nvim-web-devicons": { "branch": "master", "commit": "1c9136332840edee0c593f2f4f89598c8ed97f5f" },
+  "plenary.nvim": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
+  "surround": { "branch": "main", "commit": "ae298105122c87bbe0a36b1ad20b06d417c0433e" },
+  "telescope": { "branch": "master", "commit": "415af52339215926d705cccc08145f3782c4d132" },
+  "treesitter": { "branch": "master", "commit": "043d5fb1505ca4bc0f48b42666ae7ebc4bb1a671" },
+  "vimtex": { "branch": "master", "commit": "83e331dcad5ce28012e656eea3906b5b897db2ba" }
 }
