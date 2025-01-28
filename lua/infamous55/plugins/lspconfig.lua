@@ -22,12 +22,25 @@ end
 function spec:config()
     local lspconfig = require("lspconfig")
 
-    local windows = require("lspconfig.ui.windows")
-    windows.default_options.border = "rounded"
-    vim.lsp.handlers["textDocument/hover"] =
-        vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
-    vim.lsp.handlers["textDocument/signatureHelp"] =
-        vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+    local hover = vim.lsp.buf.hover
+    ---@diagnostic disable-next-line: duplicate-set-field
+    vim.lsp.buf.hover = function()
+        return hover({
+            border = "rounded",
+            max_height = math.floor(vim.o.lines * 0.5),
+            max_width = math.floor(vim.o.columns * 0.4),
+        })
+    end
+
+    local signature_help = vim.lsp.buf.signature_help
+    ---@diagnostic disable-next-line: duplicate-set-field
+    vim.lsp.buf.signature_help = function()
+        return signature_help({
+            border = "rounded",
+            max_height = math.floor(vim.o.lines * 0.5),
+            max_width = math.floor(vim.o.columns * 0.4),
+        })
+    end
 
     vim.api.nvim_create_autocmd({ "LspAttach" }, {
         group = vim.api.nvim_create_augroup("config.plugins.lsp.attacher", {}),
@@ -79,13 +92,9 @@ function spec:config()
         },
     })
 
-    -- Enable (broadcasting) snippet capability for completion
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities.textDocument.completion.completionItem.snippetSupport = true
-    lspconfig.html.setup({ capabilities = capabilities })
-
+    lspconfig.html.setup({})
     lspconfig.marksman.setup({})
-    lspconfig.typst_lsp.setup({})
+    lspconfig.tinymist.setup({})
     lspconfig.taplo.setup({})
     lspconfig.bashls.setup({})
     lspconfig.graphql.setup({})
