@@ -102,6 +102,10 @@ function spec:config()
     lspconfig.gopls.setup({})
     lspconfig.rust_analyzer.setup({})
 
+    lspconfig.hls.setup({
+        filetypes = { "haskell", "lhaskell", "cabal" },
+    })
+
     lspconfig.denols.setup({
         root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
     })
