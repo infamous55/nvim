@@ -46,9 +46,11 @@ function spec:config()
         },
         signature = { enabled = true, window = { border = "rounded" } },
         snippets = { preset = "luasnip" },
-        sources = {
-            cmdline = { enabled = false },
-            default = { "lsp", "path", "snippets", "buffer" },
+        cmdline = {
+            enabled = false,
+            sources = {
+                default = { "lsp", "path", "snippets", "buffer" },
+            },
         },
     })
 end
